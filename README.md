@@ -10,3 +10,7 @@
 `npm install --save-dev eslint prettier`
 
 `npm install --save @reduxjs/toolkit react-redux`
+
+`npm install --save openai`
+`npm install --save-dev dotenv`
+`npm i --save-dev @types/jest`

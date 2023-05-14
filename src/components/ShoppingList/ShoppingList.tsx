@@ -18,7 +18,7 @@ const ShoppingList = (props: ShoppingListProps) => {
   return (
     <div style={{ width: '100%' }}>
       Shopping List
-      {list.map((item) => (
+      {list.map((item, i) => (
         <ShoppingListItem item={item} />
       ))}
     </div>
