@@ -7,5 +7,6 @@
 ### install
 
 `npm install react-router-dom`
-`npm install --save-dev eslint`
-`npm install --save-dev prettier`
+`npm install --save-dev eslint prettier`
+
+`npm install --save @reduxjs/toolkit react-redux`
