@@ -1,11 +1,13 @@
 import React from 'react';
+import { Item } from '@models/Item';
 
 interface ShoppingListItemProps {
-    children?: React.ReactElement;
+  item: Item;
+  children?: React.ReactElement;
 }
 
-const ShoppingListItem = (props: ShoppingListItemProps) => {
-    return <div>Shopping List Item</div>;
+const ShoppingListItem = ({ item }: ShoppingListItemProps) => {
+  return <div>{item.name}</div>;
 };
 
 export default ShoppingListItem;
