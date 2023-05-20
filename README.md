@@ -14,3 +14,7 @@
 `npm install --save openai`
 `npm install --save-dev dotenv`
 `npm i --save-dev @types/jest`
+
+### install firebase environment
+
+`npm install --save firebase`
