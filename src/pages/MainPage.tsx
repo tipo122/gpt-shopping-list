@@ -28,10 +28,10 @@ interface MainPageProps {
 const MainPage = (props: MainPageProps) => {
   return (
     <div className="main">
-      <div>
+      <div className="child-common">
         <Chat />
       </div>
-      <div>
+      <div className="child-common">
         <ShoppingList />
       </div>
     </div>
