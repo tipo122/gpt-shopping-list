@@ -2,6 +2,8 @@ import React from 'react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore/lite';
 import { getAuth, signInWithCustomToken } from 'firebase/auth';
+import * as firebaseui from 'firebaseui';
+import 'firebaseui/dist/firebaseui.css';
 import MainPage from './pages/MainPage';
 import './App.css';
 

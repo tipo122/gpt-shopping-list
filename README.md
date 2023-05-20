@@ -18,3 +18,4 @@
 ### install firebase environment
 
 `npm install --save firebase`
+`npm install firebaseui --save`
