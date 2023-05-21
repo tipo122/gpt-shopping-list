@@ -48,7 +48,13 @@ const ShoppingList = (props: ShoppingListProps) => {
       })
     : undefined;
 
-  return <Table dataSource={itemlist} columns={columns} />;
+  return (
+    <div>
+      {error && <strong>Error: {JSON.stringify(error)}</strong>}
+      {loading && <span>Items: Loading...</span>}
+      {itemlist && <Table dataSource={itemlist} columns={columns} />}
+    </div>
+  );
 };
 
 export default ShoppingList;
