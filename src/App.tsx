@@ -8,7 +8,7 @@ import Login from './components/Login';
 import './App.css';
 
 function App() {
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
   return (
     <Router>

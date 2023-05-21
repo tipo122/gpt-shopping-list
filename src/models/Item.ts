@@ -1,5 +1,5 @@
 export interface Item {
-  _id: number;
+  _id?: number;
   name: string;
   requiredCount: number;
   stockAmount: number;
