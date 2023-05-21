@@ -1,12 +1,8 @@
 .main {
-  /* display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 80%; */
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: normal;
-  width: 80%;
+  width: 90%;
+}
+
+.main-child-common {
+  width: 50%;
 }

@@ -4,5 +4,5 @@ export interface Item {
   requiredCount: number;
   stockAmount: number;
   purchasedAmount: number;
-  category: 0;
+  category: string;
 }
