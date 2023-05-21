@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { collection } from 'firebase/firestore';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import { Table } from 'antd';
@@ -42,11 +42,13 @@ const ShoppingList = (props: ShoppingListProps) => {
     snapshotListenOptions: { includeMetadataChanges: true },
   });
 
-  const itemlist: Item[] | undefined = itemsnapshot
-    ? itemsnapshot.docs.map((item) => {
-        return item.data() as Item;
-      })
-    : undefined;
+  const itemlist: Item[] | undefined = useMemo(() => {
+    return itemsnapshot
+      ? itemsnapshot.docs.map((item) => {
+          return item.data() as Item;
+        })
+      : undefined;
+  }, [itemsnapshot]);
 
   return (
     <div>
