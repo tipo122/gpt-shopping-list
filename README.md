@@ -19,3 +19,7 @@
 
 `npm install --save firebase`
 `npm install --save react-firebase-hooks`
+
+### install antd
+
+`npm install antd`
