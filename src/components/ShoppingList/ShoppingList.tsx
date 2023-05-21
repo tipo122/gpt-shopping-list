@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { doc, collection, addDoc } from 'firebase/firestore';
+import React from 'react';
+import { collection } from 'firebase/firestore';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import ShoppingListItem from './ShoppingListItem';
 import { Item } from '@models/Item';

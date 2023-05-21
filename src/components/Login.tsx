@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { signInWithPopup } from 'firebase/auth';
 import { auth, provider } from '../firebase';
 import { Navigate, useNavigate } from 'react-router-dom';
@@ -16,6 +16,8 @@ const Login = () => {
 
   return (
     <div>
+      {error && <strong>Error: {JSON.stringify(error)}</strong>}
+      {loading && <span>User: Loading...</span>}
       {user && <Navigate to="/" />}
       <button onClick={signIn}>Sign in</button>
     </div>
