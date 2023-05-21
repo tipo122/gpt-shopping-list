@@ -10,7 +10,15 @@ interface ShoppingListItemProps {
 const ShoppingListItem = ({ item }: ShoppingListItemProps) => {
   return (
     <>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'start' }}>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'start',
+          width: '15rem',
+          whiteSpace: 'nowrap',
+        }}
+      >
         <div className="common">{item.name}</div>
       </div>
       <div
@@ -26,7 +34,15 @@ const ShoppingListItem = ({ item }: ShoppingListItemProps) => {
         <div className="common">{item.stockAmount}</div>
         <div className="common">{item.purchasedAmount}</div>
       </div>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'end' }}>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'end',
+          width: '10rem',
+          whiteSpace: 'nowrap',
+        }}
+      >
         <div className="common">{item.category}</div>
       </div>
     </>
