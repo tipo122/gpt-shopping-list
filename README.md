@@ -18,4 +18,4 @@
 ### install firebase environment
 
 `npm install --save firebase`
-`npm install firebaseui --save`
+`npm install --save react-firebase-hooks`

@@ -1,34 +1,27 @@
 import React from 'react';
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore/lite';
-import { getAuth, signInWithCustomToken } from 'firebase/auth';
-import * as firebaseui from 'firebaseui';
-import 'firebaseui/dist/firebaseui.css';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth, provider } from './firebase';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import MainPage from './pages/MainPage';
+import Login from './components/Login';
 import './App.css';
 
-const fireBaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECTID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
-  appId: process.env.REACT_APP_FIREBASE_APPID,
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENTID,
-};
-
-const app = initializeApp(fireBaseConfig);
-const db = getFirestore(app);
-
-const auth = getAuth();
-
 function App() {
+  const [user, loading, error] = useAuthState(auth);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <MainPage />
-      </header>
-    </div>
+    <Router>
+      {!user && <Navigate to="/login" />}
+      <div className="App">
+        <header className="App-header">
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </header>
+      </div>
+    </Router>
   );
 }
 
