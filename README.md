@@ -18,5 +18,6 @@ npm i --save-dev @types/jest
 npm install --save firebase
 npm install --save react-firebase-hooks
 
-npm install antd
+npm install --save antd
+npm install --save langchain
 ```

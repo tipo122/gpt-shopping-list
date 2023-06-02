@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import { Input } from 'antd';
+import { ChatOpenAI } from 'langchain/chat_models/openai';
+import { HumanChatMessage, SystemChatMessage } from 'langchain/schema';
 import ChatList from './ChatList';
 
 interface ChatProps {
